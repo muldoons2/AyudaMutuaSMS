@@ -7,14 +7,17 @@
 {% block body %}
 	<section id="main">
 		<div class="inner"><h1>Bushwick Ayuda Mutua - SMS Platform</h1></div>
-		<div class="inner"><h2>Recipient Phone Number</h2></div>
+		<div class="inner"><h3>Recipient Phone Number</h3></div>
 		<div class="inner">
+			<h3>Recipient Phone Number</h3>
+				<br>
 			<form id = sms_form>
 			<input type="text" id="recipient" size="12" placeholder="Recipient Phone Number">
 			</form>
-			<br>
-			<textarea name="comment" form="sms_form">Enter text here...</textarea>
-			<br>
+				<br>
+			<h3>Message:</h3>
+			<textarea name="comment" form="sms_form" placeholder="Enter text here..."></textarea>
+				<br>
 			<input type="button" id="spotButton" value="Send SMS" form="sms_form">
 			</form>
 		
