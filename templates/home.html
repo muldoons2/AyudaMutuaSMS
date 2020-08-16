@@ -1,112 +1,22 @@
-<!DOCTYPE HTML>
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
 
 
-<html>
-	<head>
-		<title>SBM FlaskApp</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
-	</head>
-	<body>
-
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="logo"><strong>MuldoonAds</strong> FlaskApp</a>
-				<nav>
-					<a href="#menu">Menu</a>
-				</nav>
-			</header>
-
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
-				</ul>
-			</nav>
-
-		<!-- Main -->
-			<section id="main">
-				<div class="inner">
-				
-					<div class="12u$"><span class="image fit"><img src="images/pic11.jpg" alt="" /></span></div>
-					
-
-					<header>
-						<h1>MuldoonAds Intranet</h1>
-						<p class="table"><a href="#">Sean Muldoon</a></p>
-					</header>		
-				</div>
+{% block body %}
+	<section id="main">
+		<div class="inner"><h1>Bushwick Ayuda Mutua SMS</h1></div>
+		<div class="inner"><h2>Recipient Phone Number</h2></div>
+		<div class="inner">
 		
-				<div class="inner">
-						<h3>MuldoonAds Intranet - Sitemap</h3>
-						
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>&nbsp</th>
-										<th>Description</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><a href="/">SBM FlaskApp</a></td>
-										<td>&nbsp-&nbsp</td>
-										<td>Homepage</td>
-									</tr>
-									<tr>
-										<td><a href="/index"> Index </a></td>
-										<td>&nbsp-&nbsp</td>
-										<td>Main HTML page (Empty Shell)</td>
-									</tr>
-									<tr>
-										<td><a href="/base"> Base </a></td>
-										<td>&nbsp-&nbsp</td>
-										<td>Dynamic Content Blocks go here</td>
-									</tr>
-									<tr>
-										<td><a href="/kanye"> Kanye </a></td>
-										<td>&nbsp-&nbsp</td>
-										<td>Kanye</td>
-									</tr>
-									<tr>
-										<td><a href="http://muldoonadvertising.com">MuldoonAds</a></td>
-										<td>&nbsp-&nbsp</td>
-										<td>MuldoonAds Homepage</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tfoot>
-							</table>
-						</div>
-					</div>
-			</section>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-				</ul>
-				<div class="copyright">
-					&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+		<form>
+		<input type="text" id="projectFilepath" size="40" placeholder="Recipient Phone Number">
+		<input type="button" id="spotButton" value="Spot">
+		</form>
+		
+		</div>
+		<br>
+		
+	</section>
+{% endblock %}
