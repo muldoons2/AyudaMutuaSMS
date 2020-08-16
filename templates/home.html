@@ -9,16 +9,16 @@
 		<div class="inner"><h1>Bushwick Ayuda Mutua - SMS Platform</h1></div>
 		<div class="inner"><h2>Recipient Phone Number</h2></div>
 		<div class="inner">
-			<form>
+			<form id = sms_form>
 			<input type="text" id="recipient" size="12" placeholder="Recipient Phone Number">
+			</form>
 			<br>
-			<input type="text" id="sms_message" size="120" placeholder="Recipient Phone Number">
+			<textarea name="comment" form="sms_form">Enter text here...</textarea>
 			<br>
-			<input type="button" id="spotButton" value="Send SMS">
+			<input type="button" id="spotButton" value="Send SMS" form="sms_form">
 			</form>
 		
 		</div>
-		<br>
 		
 	</section>
 {% endblock %}
