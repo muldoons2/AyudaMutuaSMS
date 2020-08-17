@@ -10,7 +10,7 @@ def home(): return render_template('home.html')
 @app.route("/sample_form")
 def sample_form(): return render_template('sample_form.html')
 
-@app.route('/submit', methods = ['POST'])
+@app.route('/submit')
 def submit():
     fname = request.form['fname']
     return render_template('submit.html',fname=fname)
