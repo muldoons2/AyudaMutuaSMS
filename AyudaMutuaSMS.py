@@ -12,8 +12,10 @@ def sample_form(): return render_template('sample_form.html')
 
 @app.route('/submit')
 def submit():
-    fname = request.form['fname']
-    return render_template('submit.html',fname=fname)
+    if request.method == 'POST':
+        fname = request.form['fname']
+        return render_template('submit.html',fname=fname)
+    return render_template('index.html')
 
 
 
