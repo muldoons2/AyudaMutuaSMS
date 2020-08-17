@@ -7,6 +7,9 @@ app = Flask(__name__)
 @app.route("/")
 def home(): return render_template('home.html')
 
+@app.route("/sample_form")
+def submit(): return render_template('sample_form.html')
+
 @app.route('/submit',methods = ['GET','POST'])
 def submit():
     if request.method == 'POST':
