@@ -1,0 +1,38 @@
+
+  
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+
+{% block body %}
+	<section id="main">
+		<div class="inner"><h1>Bushwick Ayuda Mutua - SMS Platform</h1></div>
+		<div class="inner">
+			
+			<h3>Recipient Phone Number</h3>
+
+				<form id ="sms_form" action="/submit.html">
+				<input type="text" id="recipient" size="12" placeholder="Recipient Phone Number">
+			
+			
+			<!-- <h3>Message:</h3>
+				<textarea name="comment" form="sms_form" placeholder="Enter text here..."></textarea> -->
+				<br>
+				<input type="button" id="spotButton" value="Send SMS" form="sms_form">
+				</form>
+
+				<form method="POST" action="submit.html">
+				  <label for="fname">First name:</label><br>
+				  <input type="text" id="fname" name="fname" value="John"><br>
+				  <label for="lname">Last name:</label><br>
+				  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+				  <input type="submit" value="Submit">
+				</form> 
+			
+		
+		</div>
+		
+	</section>
+{% endblock %}
