@@ -12,8 +12,8 @@ def sample_form(): return render_template('sample_form.html')
 
 @app.route('/submit', methods = ['POST'])
 def submit():
-    recipient = request.form['recipient']
-    return render_template('submit.html',recipient=recipient)
+    fname = request.form['fname']
+    return render_template('submit.html',fname=fname)
 
 
 
