@@ -1,10 +1,6 @@
 import os
 import requests
 from flask import Flask, render_template, url_for, redirect, request
-from datetime import datetime
-from flask_wtf import FlaskForm
-from wtforms import StringField, TextField, SubmitField
-from wtforms.validators import DataRequired, Length
 from twilio.rest import Client
 
 app = Flask(__name__)
@@ -56,7 +52,6 @@ def register():
     twil_list.append(token)
     twil_list.append(body_text)
     send_sms(from_num,to_num,sid,token,body_text)
-    
     return redirect('/twilio')
 
 ###################################################
