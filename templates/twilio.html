@@ -1,0 +1,16 @@
+  
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+{% block body %}
+	<section id="main"><div class="inner">
+
+		<h1>Success</h1>	
+
+		{% for to_num in twil_list%}
+			<li>{{to_num}}</li>
+		{% endfor %}
+		
+	</div></section>
+{% endblock %}

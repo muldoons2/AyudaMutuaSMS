@@ -5,20 +5,29 @@
 
 
 {% block body %}
-	<section id="main">
-		<div class="inner"><h1>Bushwick Ayuda Mutua - SMS Platform</h1></div>
-		<div class="inner">
-			<h3>Recipient Phone Number</h3>
-			<form id = sms_form>
-			<input type="text" id="recipient" size="12" placeholder="Recipient Phone Number">
-			</form>
-			<h3>Message:</h3>
-			<textarea name="comment" form="sms_form" placeholder="Enter text here..."></textarea>
+	<section id="main"><div class="inner">
+		<h1>SMS Platform</h1>
+		<h3>Recipient Phone Number</h3>
+
+			<form action="/register" method="post">
+				<label for="from_num">From:</label>
+				<select name="from_num" id="from_num">
+						<option value= "+19175254826"> SBM Twilio Number</option>
+						<option value= "+19175258888"> Wrong Num 1</option>
+						<option value= "+19175259999"> Wrong Num 2</option>	
+				</select>
 				<br>
-			<input type="button" id="spotButton" value="Send SMS" form="sms_form">
+				<label for="to_num">To:</label>
+				<input type="text" id="to_num" name="to_num" value="+19144699732"><br>
+				<label for="sid">SID:</label>
+				<input type="text" id="sid" name="sid" value="AC0f09286ecbe74943e0513a4fa26a8310"><br>
+				<label for="token">Token:</label>
+				<input type="text" id="token" name="token" value="95ee50fb247eabfac89d3cbcfc5f1d98"><br>
+				<label for="body_text">Message Body:</label>
+				<input type="text" id="body_text" name="body_text" value="This is a test, sent on:"><br>
+			
+			<input type="submit" value="Submit Form">
 			</form>
 		
-		</div>
-		
-	</section>
+	</div></section>
 {% endblock %}
