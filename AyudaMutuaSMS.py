@@ -2,30 +2,20 @@ import os
 import requests
 from flask import Flask, render_template, url_for, redirect, request
 from twilio.rest import Client
-
 app = Flask(__name__)
-app.config.update(dict(
-    SECRET_KEY="powerful secretkey",
-    WTF_CSRF_SECRET_KEY="a csrf secret key"
-))
+app.config.update(dict(SECRET_KEY="powerful secretkey", WTF_CSRF_SECRET_KEY="a csrf secret key"))
 
-### List of phone numbers, comma separated. You can add more numbers to this list. 
-# SBM_nums = ['+19144699732','+19142827342']
-
-### Same basic function as before, but "to" is now a variable called x
+###################################################
 def send_sms(from_num,to_num,sid,token,body_text):
     account_sid = sid
     auth_token = token
     client = Client(account_sid, auth_token)
-
     message = client.messages \
                     .create(
                          body=body_text,
                          from_=from_num,
                          to= to_num
                      )
-
-# ### This is a "loop" that repeats the function for each number on the list. 
 # for y in nums:
 #     send_sms(SBM_num)
 
@@ -44,8 +34,6 @@ def register():
     sid = request.form.get("sid")
     token = request.form.get("token")
     body_text = request.form.get("body_text")
-#     x = [from_num,to_num,sid,token, body]
-#     twil_list.append(x)
     twil_list.append(from_num)
     twil_list.append(to_num)
     twil_list.append(sid)
