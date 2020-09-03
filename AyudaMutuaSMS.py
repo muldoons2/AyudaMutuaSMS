@@ -37,6 +37,7 @@ def register():
     nums = num1.split(",")
     for x in nums:
         x= "+1"+x
+        time.sleep(1)
         send_sms(x,from_num,sid,token,body_text)
     return redirect('/twilio')
 
