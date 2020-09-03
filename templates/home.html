@@ -5,23 +5,25 @@
 
 
 {% block body %}
-	<section id="main"><div class="inner">
-		<h1>SMS Platform</h1>
+		<section id="main"><div class="inner">
+		<h1>SMS Platform Instructions:</h1>
+		<p> 
+			<li> All phone numbers must be exactly 10 digits. The U.S. country code ("+1") is automatically added to each number.<br>
+			<li> Do not include any spaces<br>
+			<li> The "From" field should be a single 10-digit phone number, <i>i.e. +19143320325</i><br> 
+			<li> The "To" field can be a single phone number, or a comma-seperated list of up to 25 numbers. This list cannot end with a comma.<br>
+			<li> <i>i.e. 9143320325 or 9143320325,9143320325,9143320325,9143320325</i><br>
+			<li> Insert SID and Token (Provided by Twilio)<br>
+			<li> Type message into "Body", and send!<br>
+		</p>
 
 			<form action="/register" method="post">
-				<label for="from_num">From:</label>
-				<select name="from_num" id="from_num">
-						<option value= "+19175254826"> SBM Twilio Number</option>
-						<option value= "+19175258888"> Wrong Num 1</option>
-						<option value= "+19175259999"> Wrong Num 2</option>	
-				</select>
 				<br>
-				<label for="num1">To:</label>
-				<input type="text" id="num1" name="num1" value="+19144699732"><br>
-				<label for="num2">To:</label>
-				<input type="text" id="num2" name="num2" value="+19144699732"><br>
-				<label for="num3">To:</label>
-				<input type="text" id="num3" name="num3" value="+19144699732"><br>
+				<label for="from_num">From:</label>
+				<input type="text" id="from_num" name="from_num" value="+19175254826"><br> 
+				<!-- <input type="text" pattern="[0-9]{3}" id="from_num" name="from_num" value="+19175254826"><br>  -->
+				<label for="num1">To: </label>
+				<input type="text" pattern="^([0-9]{10}[,]?){1-25}$" id="num1" name="num1" value="9144699732"><br>
 				<label for="sid">SID:</label>
 				<input type="text" id="sid" name="sid"><br>
 				<label for="token">Token:</label>
