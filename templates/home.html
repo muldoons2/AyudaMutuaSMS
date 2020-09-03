@@ -10,15 +10,24 @@
 
 			<form action="/register" method="post">
 				<label for="from_num">From:</label>
-				<input type="text" id="from_num" name="from_num" value="+19144699732">
-				<label for="to_num">To:</label>
-				<input type="text" id="to_num" name="to_num" value="+19144699732">
+				<select name="from_num" id="from_num">
+						<option value= "+19175254826"> SBM Twilio Number</option>
+						<option value= "+19175258888"> Wrong Num 1</option>
+						<option value= "+19175259999"> Wrong Num 2</option>	
+				</select>
+				<br>
+				<label for="num1">To:</label>
+				<input type="text" id="num1" name="num1" value="+19144699732"><br>
+				<label for="num2">To:</label>
+				<input type="text" id="num2" name="num2" value="+19144699732"><br>
+				<label for="num3">To:</label>
+				<input type="text" id="num3" name="num3" value="+19144699732"><br>
 				<label for="sid">SID:</label>
-				<input type="text" id="sid" name="sid">
+				<input type="text" id="sid" name="sid"><br>
 				<label for="token">Token:</label>
-				<input type="text" id="token" name="token">
+				<input type="text" id="token" name="token"><br>
 				<label for="body_text">Message Body:</label>
-				<input type="text" id="body_text" name="body_text" value="Type your message here.">
+				<input type="text" id="body_text" name="body_text" value="This is a test, sent on:"><br>
 			
 			<input type="submit" value="Submit Form">
 			</form>
