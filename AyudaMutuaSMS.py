@@ -26,20 +26,17 @@ def index():
 ###################################################
 @app.route("/register", methods=["POST"])
 def register():
-    from_num = request.form.get("from_num")
     num1 = request.form.get("num1")
-    num2 = request.form.get("num2")
-    num3 = request.form.get("num3")
+    from_num = request.form.get("from_num")
     sid = request.form.get("sid")
     token = request.form.get("token")
     body_text = request.form.get("body_text")
-    twil_list.append(from_num)
-    twil_list.append(sid)
-    twil_list.append(token)
-    twil_list.append(body_text)
-    nums=[num1,num2,num3]
-    twil_list.append(nums)
+    data = [from_num,num1,sid,token,body_text]
+    for a in data:
+        twil_list.append(a)
+    nums = num1.split(",")
     for x in nums:
+        x= "+1"+x
         send_sms(x,from_num,sid,token,body_text)
     return redirect('/twilio')
 
